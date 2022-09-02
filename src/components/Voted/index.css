@@ -7,7 +7,8 @@
   width: 100%;
   gap: 20px;
   width: 100%;
-  height: 390px;
+  height: 290px;
+
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -26,11 +27,11 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #ff0000;
 }
-.Voted{ display: flex;
+.Voted__card{ display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  width: 100px;
-  height: 200px;
+  width: 200px;
+  height:300px;
   color: white;
-  background-color: black;}
+ }

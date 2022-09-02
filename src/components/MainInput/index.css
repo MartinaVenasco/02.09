@@ -20,7 +20,7 @@
   color: #999999fc;
   border-radius: 25px;
   box-shadow: 4px 0px 8px rgba(255, 255, 255, 0.43);
- 
+ z-index: 50;
 }
 
 .MainInput button {

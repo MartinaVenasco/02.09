@@ -1,7 +1,8 @@
 .MainSection {
   padding: 100px 40px;
   display: flex;
-  background-color: rgb(9, 9, 9);
+  flex-direction: column;
   height: 100vh;
-  margin-top: 30px;
+  gap:250px;
+  margin-top: 80px;
 }

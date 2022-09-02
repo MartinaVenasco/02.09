@@ -8,7 +8,7 @@ const MainInput = ({ inputValue, setInputValue, isRendered, onFormsubmit }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
-      window.scrollY >= 700
+      window.scrollY >= 2100
         ? setInputVisibility(true)
         : setInputVisibility(false)
     );

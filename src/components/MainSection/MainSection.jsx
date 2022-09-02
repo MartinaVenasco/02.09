@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import MainCard from "../MainCard";
+
+import {RiStarSLine} from 'react-icons/ri'
 import TopRatedList from "../TopRatedList";
 import Voted from "../Voted";
 import { GET } from "../../utils/api";
@@ -24,7 +25,7 @@ const [page, setPage] = useState("1")
     GET("movie", "upcoming", "&language=en-US&page=1").then((data) =>
       setMovieLists((prev) => ({ ...prev, upcoming: data.results }))
     );
-  }, []);
+  }, [page]);
 
   return (
     <div className="MainSection">
@@ -32,29 +33,27 @@ const [page, setPage] = useState("1")
         <Voted
           modalVisibility={modalVisibility}
           cardData={movieLists.topRated.filter(
-                (movie) => movie.vote_average >= 8.7
+                (movie) => movie.vote_average >= 8.6
               )}
         />
       )}</div>
-      {movieLists.popular && (
-        <MainCard
-          modalVisibility={modalVisibility}
-          cardData={movieLists.popular[0]}
-        />
-      )}
+     
+      <div className="TopRated_Section">
+      <h1 className="toprated_h1">Top Rated <i className="star_1" ><RiStarSLine/> </i></h1>
       {movieLists.topRated && (
         <TopRatedList
           modalVisibility={modalVisibility}
           cardData={movieLists.topRated}
         />
-      )}
+      )}</div>
+      <div className="UpComing_Section">
       {movieLists.upcoming && (
         <UpComingList
           modalVisibility={modalVisibility}
           cardData={movieLists.upcoming}
         />
       )}
-      
+      </div>
     </div>
   );
 };

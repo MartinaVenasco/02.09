@@ -1,8 +1,10 @@
 .MovieEntity {
+  margin-top: 1900px;
   display: flex;
   background-color: rgb(9, 9, 9);
   color: white;
   text-transform: uppercase;
+  z-index: 49;
 }
 
 .MovieEntity__info {

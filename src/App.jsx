@@ -4,7 +4,6 @@ import MainSection from "./components/MainSection";
 import Modal from './components/Modal'
 import Navbar from "./components/Navbar"
 import logo from "./logo.png"
-import {RiStarSLine} from 'react-icons/ri'
 import "./App.css";
 import { useState } from "react";
 
@@ -23,15 +22,20 @@ function App() {
   return (
     <div className="App">
     <div className="topContent"> <div className="geeks"></div><img className="logo" src ={logo} alt="logo"></img><Navbar/>
-    <div className="title_section"> <h1 className="toprated_h1">Top Rated <i className="star_1" ><RiStarSLine/> </i></h1><h1 className="upcoming_h1">Up Coming...</h1></div></div>
-     <div className="Main_section"> <MainSection modalVisibility={onHandleModal} /></div>
+   </div>
+    
+     <div className="Main_section">
+     
+      <MainSection modalVisibility={onHandleModal} /></div>
       <MainInput
         inputValue={inputValue}
         setInputValue={setInputValue}
         isRendered={isRendered}
         onFormsubmit={setRendered}
       />
-     <div className="MovieSearched"><MovieEntity
+     <div className="MovieSearched">
+
+     <MovieEntity
         movieID={inputValue}
         setInputValue={setInputValue}
         isRendered={isRendered}
