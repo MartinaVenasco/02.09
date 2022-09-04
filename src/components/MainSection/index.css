@@ -1,8 +1,20 @@
 .MainSection {
-  padding: 100px 40px;
+  padding: 100px ;
   display: flex;
   flex-direction: column;
   height: 100vh;
   gap:250px;
   margin-top: 80px;
 }
+span { animation: flip 5s infinite;
+  animation-delay: calc(.2s * var(--i));
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }}

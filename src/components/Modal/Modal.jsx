@@ -1,4 +1,5 @@
 import './index.css';
+import {RiStarSLine} from 'react-icons/ri'
 
 const Modal = ({data, isVisibile, onModalClick}) => {
   const { title, vote_average, poster_path, overview } = data;
@@ -6,10 +7,12 @@ const Modal = ({data, isVisibile, onModalClick}) => {
   return isVisibile && (
     <div className="Modal__overlay" onClick={() => onModalClick(false)}>
         <div className="Modal" >
-        <img className="MainCard--img" src={`https://image.tmdb.org/t/p/w342${ poster_path }`} alt={ title }></img>
+        <img className="Modal__img" src={`https://image.tmdb.org/t/p/w342${ poster_path }`} alt={ title }></img>
+        <div className='Modal_text'>
         <h2 className="Modal__header">{title}</h2>
         <p className="Modal__desc">{overview}</p>
-        <p className='vote'> {vote_average}</p>
+        <div className='average'>
+        <p className='vote'> <RiStarSLine size={25}/> {vote_average}</p></div></div>
       </div>
     </div>
   )
