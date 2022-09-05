@@ -11,6 +11,7 @@
   scroll-snap-type: y mandatory;
   scroll-padding: 10px 0 0 10px;
   padding: 5px;
+
 }
 .UpComing__card { display: flex;
   scroll-snap-align: start;

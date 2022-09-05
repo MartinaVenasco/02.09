@@ -2,8 +2,8 @@
   padding: 100px ;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  gap:250px;
+  margin-bottom: 150px;
+
   margin-top: 80px;
 }
 span { animation: flip 5s infinite;

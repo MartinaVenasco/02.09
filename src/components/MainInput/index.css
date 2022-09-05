@@ -1,11 +1,13 @@
 .MainInput {
   height: 40px;
   display: flex;
-  position: absolute;
+  justify-content: center;
   top: 980px;
   left: calc(50% - 180px);
   gap: 30px;
   transition: all 0.35s;
+  z-index: 12000;
+  margin-bottom: 50px;
 }
 
 .MainInput input {
@@ -20,7 +22,7 @@
   color: #999999fc;
   border-radius: 25px;
   box-shadow: 4px 0px 8px rgba(255, 255, 255, 0.43);
- z-index: 50;
+
 }
 
 .MainInput button {

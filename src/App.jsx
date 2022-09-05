@@ -7,7 +7,7 @@ import logo from "./logo.png"
 import "./App.css";
 import { useState } from "react";
 
-function App() {
+function App({toprated}) {
   const [inputValue, setInputValue] = useState("324668");
   const [isRendered, setRendered] = useState(false);
   const [modalData, setModalData] = useState({});
@@ -26,20 +26,18 @@ function App() {
     
      <div className="Main_section">
      
-      <MainSection modalVisibility={onHandleModal} /></div>
-      <MainInput
+      <MainSection modalVisibility={onHandleModal} toprated={toprated} /></div>
+<MainInput
         inputValue={inputValue}
         setInputValue={setInputValue}
         isRendered={isRendered}
         onFormsubmit={setRendered}
       />
-     <div className="MovieSearched">
-
      <MovieEntity
         movieID={inputValue}
         setInputValue={setInputValue}
         isRendered={isRendered}
-      /></div> 
+      />
       <Modal data={modalData} isVisibile={isModalVisibile} onModalClick={setModalVisibility}/>
     </div>
   );

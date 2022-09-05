@@ -1,5 +1,5 @@
 import MainCard from "../MainCard";
-import "./index.css";
+import "./index.scss";
 import { memo } from "react";
 const Voted = ({ cardData, modalVisibility }) => {
   return (

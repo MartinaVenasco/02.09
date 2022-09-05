@@ -1,9 +1,13 @@
 
+
 import './index.css';
 
 const Navbar = ({TopRated}) => {
 
-      const scrollTopRated = () => {
+console.log (TopRated)
+
+      const scrollTopRated = (e) => {
+        e.preventDefault()
         window.scrollTo({
           top: TopRated.current.offsetTop,
           left: 0,
@@ -16,7 +20,7 @@ const Navbar = ({TopRated}) => {
       <ul className="Navbar__list">
        
         <li>
-          <a href="#topS" onClick={() => {scrollTopRated(TopRated);}}>TOP RATED</a>
+          <a  href="/" onClick={scrollTopRated}>TOP RATED</a>
         </li>
         <li>
           <a href="/">FAVORITE</a>

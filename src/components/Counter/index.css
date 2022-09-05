@@ -5,6 +5,7 @@
   font-size: 20px;
   align-items: center;
   gap: 5px;
+ color: white;
 }
 
 .counter button {
@@ -15,3 +16,9 @@
 
   border-radius: 4px;
 }
+.decrease, .increase-b{z-index: 1000;
+  border-radius: 100px;
+ color: white;
+}
+
+.page {font-weight: 100;}

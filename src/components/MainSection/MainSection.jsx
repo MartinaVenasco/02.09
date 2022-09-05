@@ -7,7 +7,7 @@ import { GET } from "../../utils/api";
 import UpComingList from "../UpComingList";
 import "./index.css";
 
-const MainSection = ({ modalVisibility }) => {
+const MainSection = ({ modalVisibility, toprated }) => {
   const [movieLists, setMovieLists] = useState({});
   const TopRated = useRef(null);
   const [page, setPage] = useState(5);
@@ -27,7 +27,7 @@ const MainSection = ({ modalVisibility }) => {
   }, [page]);
 
   return (
-    <div className="MainSection">
+    <div className="MainSection" toprated={TopRated}>
       <div className="Voted">
         {movieLists.topRated && (
           <Voted
@@ -40,7 +40,7 @@ const MainSection = ({ modalVisibility }) => {
       </div>
 
       <div className="TopRated_Section">
-        <h1 className="toprated">
+        <h1 className="toprated" ref={TopRated} toprated={TopRated}>
           {" "}
           <span>T</span>
           <span>o</span>
@@ -55,7 +55,7 @@ const MainSection = ({ modalVisibility }) => {
         </h1>
         {movieLists.topRated && (
           <TopRatedList
-            ref={TopRated}
+           
             modalVisibility={modalVisibility}
             cardData={movieLists.topRated}
           />
